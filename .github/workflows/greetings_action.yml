@@ -1,0 +1,13 @@
+on: [issues]
+
+jobs:
+  greetings:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: First Interaction
+        uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: 'Thank you for your first issue! <3'
