@@ -2,7 +2,8 @@ name: GitHub Action Start
 on: [push]
 jobs:
   start:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - run: echo "This is automatically triggered job by ${{ github.event_name }}"
-      - run: "OS is ${{ runner.os }}"
+      - run: echo "Operating system is ${{ runner.os }}"
+      - run: echo "URL is ${{ vars.URL }}"
